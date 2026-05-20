@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="SimpleReminder icon variant 6">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7FA9A4"/>
+      <stop offset="100%" stop-color="#98C4BE"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="64" y="64" width="896" height="896" rx="156" fill="url(#bg)"/>
+
+  <circle cx="512" cy="512" r="256" fill="none" stroke="#FFFFFF" stroke-width="56"/>
+
+  <path d="M391 523 L475 607 L651 431"
+        fill="none"
+        stroke="#374153"
+        stroke-width="58"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <circle cx="690" cy="334" r="36" fill="#374153"/>
+</svg>

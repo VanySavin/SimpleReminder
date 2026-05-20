@@ -1,0 +1,65 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="DropShadowColor">#020617</Color>
+
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#111827"/>
+    <SolidColorBrush x:Key="CardBackgroundBrush" Color="#1F2937"/>
+    <SolidColorBrush x:Key="PrimaryTextBrush" Color="#F9FAFB"/>
+    <SolidColorBrush x:Key="SecondaryTextBrush" Color="#AAB2C0"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="#3B82F6"/>
+    <SolidColorBrush x:Key="AccentHoverBrush" Color="#2563EB"/>
+    <SolidColorBrush x:Key="AccentPressedBrush" Color="#1D4ED8"/>
+    <SolidColorBrush x:Key="DisabledAccentBrush" Color="#1E3A5F"/>
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="#111827"/>
+    <SolidColorBrush x:Key="InputBorderBrush" Color="#4B5563"/>
+    <SolidColorBrush x:Key="ButtonTextBrush" Color="#FFFFFF"/>
+
+    <SolidColorBrush x:Key="DangerBrush" Color="#F87171"/>
+    <SolidColorBrush x:Key="WarningBrush" Color="#F59E0B"/>
+    <SolidColorBrush x:Key="SuccessBrush" Color="#34D399"/>
+
+    <SolidColorBrush x:Key="MutedButtonBackgroundBrush" Color="#1F2937"/>
+    <SolidColorBrush x:Key="MutedButtonHoverBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="MutedButtonForegroundBrush" Color="#E5E7EB"/>
+    <SolidColorBrush x:Key="MutedButtonBorderBrush" Color="#4B5563"/>
+
+    <SolidColorBrush x:Key="SecondaryButtonBackgroundBrush" Color="#1E3A5F"/>
+    <SolidColorBrush x:Key="SecondaryButtonBorderBrush" Color="#3B82F6"/>
+    <SolidColorBrush x:Key="SecondaryButtonForegroundBrush" Color="#BFDBFE"/>
+    <SolidColorBrush x:Key="SecondaryButtonHoverBrush" Color="#2563EB"/>
+
+    <SolidColorBrush x:Key="ListRowBackgroundBrush" Color="#111827"/>
+    <SolidColorBrush x:Key="ListRowBorderBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="ListRowTextBrush" Color="#D1D5DB"/>
+
+    <SolidColorBrush x:Key="EmptyStateTitleBrush" Color="#D1D5DB"/>
+    <SolidColorBrush x:Key="ErrorTextBrush" Color="#F87171"/>
+    <SolidColorBrush x:Key="HintTextBrush" Color="#6B7280"/>
+
+    <SolidColorBrush x:Key="NotificationCardBackgroundBrush" Color="#1F2937"/>
+    <SolidColorBrush x:Key="NotificationCardBorderBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="NotificationTitleBrush" Color="#F9FAFB"/>
+    <SolidColorBrush x:Key="NotificationMessageBrush" Color="#AAB2C0"/>
+    <SolidColorBrush x:Key="NotificationCloseForegroundBrush" Color="#9CA3AF"/>
+    <SolidColorBrush x:Key="NotificationCloseHoverBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="NotificationIconBgBrush" Color="#1E3A5F"/>
+    <SolidColorBrush x:Key="NotificationIconBorderBrush" Color="#3B82F6"/>
+    <SolidColorBrush x:Key="NotificationSecondaryButtonBgBrush" Color="#1E3A5F"/>
+    <SolidColorBrush x:Key="NotificationSecondaryButtonFgBrush" Color="#BFDBFE"/>
+    <SolidColorBrush x:Key="NotificationSecondaryButtonBorderBrush" Color="#3B82F6"/>
+    <SolidColorBrush x:Key="ProgressTrackBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="ProgressFillBrush" Color="#3B82F6"/>
+
+    <SolidColorBrush x:Key="FooterBackgroundBrush" Color="#0F172A"/>
+    <SolidColorBrush x:Key="ScrollBarThumbBrush" Color="#4B5563"/>
+    <SolidColorBrush x:Key="ScrollBarThumbHoverBrush" Color="#6B7280"/>
+    <SolidColorBrush x:Key="HelpButtonBackgroundBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="HelpButtonHoverBrush" Color="#4B5563"/>
+    <SolidColorBrush x:Key="ComboBoxSelectionBrush" Color="#1E3A5F"/>
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#111827"/>
+    <SolidColorBrush x:Key="ControlHoverBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="ControlPressedBrush" Color="#4B5563"/>
+    <SolidColorBrush x:Key="SliderTrackBrush" Color="#374151"/>
+    <SolidColorBrush x:Key="SliderThumbBorderBrush" Color="#60A5FA"/>
+</ResourceDictionary>

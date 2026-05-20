@@ -1,0 +1,119 @@
+<Window x:Class="ReminderApp.Views.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="О программе SimpleReminder"
+        Icon="pack://application:,,,/Assets/reminder_icon.ico"
+        MinWidth="640"
+        MinHeight="480"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource PrimaryTextBrush}"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="CanResizeWithGrip">
+    <Window.Resources>
+        <Style x:Key="AboutCard" TargetType="Border">
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Padding" Value="16"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+        </Style>
+        <Style x:Key="AboutHeading" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextBrush}"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+        <Style x:Key="AboutBody" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryTextBrush}"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="LineHeight" Value="22"/>
+        </Style>
+        <Style x:Key="AboutHint" TargetType="TextBlock" BasedOn="{StaticResource AboutBody}">
+            <Setter Property="Foreground" Value="{DynamicResource SecondaryTextBrush}"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="24,20,24,8">
+            <TextBlock Text="О программе" FontSize="22" FontWeight="SemiBold" Foreground="{DynamicResource PrimaryTextBrush}"/>
+            <TextBlock x:Name="VersionLine"
+                       Margin="0,6,0,0"
+                       FontSize="13"
+                       Foreground="{DynamicResource SecondaryTextBrush}"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1"
+                      Margin="24,0,24,0"
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <Border Style="{StaticResource AboutCard}">
+                    <StackPanel>
+                        <TextBlock Text="Зачем нужна эта программа" Style="{StaticResource AboutHeading}"/>
+                        <TextBlock Style="{StaticResource AboutBody}"
+                                   Text="SimpleReminder помогает не забывать дела: лекарства, звонки, встречи, оплату счетов или любой другой текст. Вы пишете обычными словами, что именно напомнить и когда. Работает на вашем компьютере без обязательного интернета: напоминания и настройки сохраняются в папке программы (рядом с файлом запуска), их можно перенести на другой ПК, скопировав всю папку."/>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource AboutCard}">
+                    <StackPanel>
+                        <TextBlock Text="Как это работает (простыми словами)" Style="{StaticResource AboutHeading}"/>
+                        <TextBlock Style="{StaticResource AboutBody}" Margin="0,0,0,10"
+                                   Text="1. Вы вводите одну строку: сначала время своими словами, затем текст напоминания.&#x0a;2. Программа вычисляет дату и время срабатывания и добавляет задачу в список.&#x0a;3. В нужный момент появится окно поверх других программ (и при необходимости короткий звук — это настраивается).&#x0a;4. В окне можно отметить дело выполненным или отложить напоминание на несколько минут — набор кнопок «отложить» задаётся в настройках.&#x0a;5. Пока окно главное свёрнуто или закрыто крестиком, приложение может оставаться в области уведомлений Windows («трей») — смотрите переключатель в настройках."/>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource AboutCard}">
+                    <StackPanel>
+                        <TextBlock Text="Как пользоваться по шагам" Style="{StaticResource AboutHeading}"/>
+                        <TextBlock Style="{StaticResource AboutBody}" Margin="0,0,0,10"
+                                   Text="1. Запустите SimpleReminder.&#x0a;2. В большом поле ввода наберите фразу с временем и смыслом напоминания (ниже есть примеры).&#x0a;3. Нажмите кнопку «Добавить» или Enter, если так включено в настройках.&#x0a;4. В списке «Активные напоминания» видно, когда сработает каждая задача; там же кнопки «Отложить», «Выполнено» и «Удалить».&#x0a;5. Кнопка «Тест уведомления» показывает, как будет выглядеть всплывающее окно.&#x0a;6. В «Настройках» меняют тему оформления, звук, время показа окна, варианты отложить, поведение при закрытии окна и другие параметры."/>
+                        <TextBlock Style="{StaticResource AboutHint}"
+                                   Text="Если программа пишет, что время не распознано, сравните ввод с примерами ниже: чаще всего нужно чуть изменить формулировку или указать время по-другому."/>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource AboutCard}">
+                    <StackPanel>
+                        <TextBlock Text="Примеры фраз для времени" Style="{StaticResource AboutHeading}"/>
+                        <TextBlock Style="{StaticResource AboutBody}" Margin="0,0,0,8"
+                                   Text="Можно копировать смысл, подставляя свои слова после времени. Время — в начале или в известных шаблонах; дальше идёт текст напоминания."/>
+                        <TextBlock Style="{StaticResource AboutBody}"
+                                   Text="• через 5 минут / через 20 минут позвонить&#x0a;• через полчаса выключить плиту&#x0a;• через 2 часа проверить почту&#x0a;• через день или через 3 дня в 10:00 оплатить&#x0a;• через неделю или через 2 недели сдать отчёт&#x0a;• через месяц / через 3 месяца продлить подписку&#x0a;• через год поздравить&#x0a;• через пару дней / пару недель / пару месяцев встреча&#x0a;• послезавтра в 15:30 забрать посылку&#x0a;• завтра суп — завтра в то же время суток&#x0a;• сегодня в 18:00 ужин&#x0a;• завтра в 9:00 к врачу&#x0a;• в 14:30 совещание — если такое время сегодня ещё впереди, сработает сегодня; иначе завтра"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource AboutCard}">
+                    <StackPanel>
+                        <TextBlock Text="Разработчики" Style="{StaticResource AboutHeading}"/>
+                        <TextBlock Style="{StaticResource AboutBody}" Margin="0,0,0,6" Text="Иван Савин"/>
+                        <TextBlock Style="{StaticResource AboutBody}" Margin="0,0,0,6" Text="OneOf"/>
+                        <TextBlock Style="{StaticResource AboutBody}"
+                                   Text="Cursor (ИИ-ассистент) — текст справки и окно «О программе»"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Border Grid.Row="2"
+                Background="{DynamicResource CardBackgroundBrush}"
+                BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="0,1,0,0"
+                Padding="24,12">
+            <Button Content="Закрыть"
+                    HorizontalAlignment="Right"
+                    MinWidth="120"
+                    IsCancel="True"
+                    Style="{StaticResource PrimaryButtonStyle}"/>
+        </Border>
+    </Grid>
+</Window>

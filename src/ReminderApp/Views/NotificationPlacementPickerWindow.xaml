@@ -1,0 +1,40 @@
+<Window x:Class="ReminderApp.Views.NotificationPlacementPickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Выбор позиции уведомления"
+        Width="340"
+        Height="180"
+        WindowStyle="ToolWindow"
+        Topmost="True"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Background="{DynamicResource NotificationCardBackgroundBrush}"
+        Foreground="{DynamicResource PrimaryTextBrush}"
+        WindowStartupLocation="Manual">
+    <Border Margin="10"
+            Padding="12"
+            CornerRadius="10"
+            BorderThickness="1"
+            BorderBrush="{DynamicResource NotificationCardBorderBrush}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Перетащите окно в нужное место"
+                       FontSize="14"
+                       FontWeight="SemiBold"/>
+            <TextBlock Grid.Row="1"
+                       Margin="0,8,0,0"
+                       Text="Можно перетянуть на любой монитор, затем нажмите кнопку ниже."
+                       Foreground="{DynamicResource SecondaryTextBrush}"
+                       TextWrapping="Wrap"/>
+            <Button Grid.Row="2"
+                    Margin="0,12,0,0"
+                    Content="Использовать это место"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Click="UseButton_OnClick"/>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,63 @@
+SimpleReminder — как собрать portable-версию
+============================================
+
+ВАЖНО: «Сборка» в Visual Studio и «portable» — это РАЗНЫЕ вещи!
+
+  Visual Studio → Сборка (Build) → Release
+    Папка: src\ReminderApp\bin\Release\net8.0-windows\
+    exe ~170 КБ + dll — нужен установленный .NET 8 на компьютере
+    НЕ копировать на другой ПК как «portable»!
+
+  Portable (для переноса без установки .NET)
+    Папка: publish\SimpleReminder-win-x64-portable\
+    exe ~70 МБ — .NET внутри, ставить ничего не нужно
+
+
+Самый простой способ — двойной клик по файлу:
+----------------------------------------------
+
+  build-portable.bat          (в корне проекта winproject)
+
+  Или из PowerShell:
+  .\publish-portable-win-x64.ps1
+
+
+Что должно получиться:
+----------------------
+
+  publish\SimpleReminder-win-x64-portable\
+    SimpleReminder.exe   (~68–71 МБ)
+    README.txt
+
+  Если exe ~170 КБ — что-то пошло не так, это не portable.
+
+
+Перед сборкой:
+--------------
+
+  1. Закройте SimpleReminder.exe, если он запущен.
+  2. Нужен .NET 8 SDK (только на машине, где собираете):
+     dotnet --version
+
+
+Перенос на другой компьютер:
+----------------------------
+
+  Копируйте ЦЕЛИКОМ папку:
+    SimpleReminder-win-x64-portable
+
+  Не копируйте bin\Release\...
+
+
+Visual Studio (альтернатива):
+-----------------------------
+
+  ПКМ по проекту ReminderApp → Опубликовать (Publish)
+  Профиль: Portable-win-x64
+  Или вручную: Folder, win-x64, Self-contained, Single file
+
+
+Тесты парсера (необязательно):
+------------------------------
+
+  dotnet test tests\ReminderApp.Tests -c Release

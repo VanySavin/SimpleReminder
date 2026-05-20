@@ -1,0 +1,104 @@
+## Сборка .NET
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Dd]ebugPublic/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Ll]og/
+[Ll]ogs/
+*.log
+
+## MSBuild / NuGet
+*.user
+*.userosscache
+*.suo
+*.cache
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.ipdb
+*.pdb
+*.idb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/packages/*
+!**/packages/build/
+*.nupkg
+*.snupkg
+**/*.nuget.props
+**/*.nuget.targets
+
+## Portable publish (собирается скриптом, ~70 МБ)
+publish/
+
+## Локальные данные приложения (reminders.json, settings.json)
+data/
+
+## Visual Studio / Rider
+.vs/
+*.rsuser
+*.sln.docstates
+.idea/
+*.DotSettings.user
+
+## Cursor (локальные настройки редактора)
+.cursor/
+
+## Тесты и покрытие
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+*.opencover.xml
+
+## Секреты и локальная конфигурация
+*.pfx
+*.publishsettings
+secrets.json
+**/appsettings.*.json
+!**/appsettings.json
+
+## ОС Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+## ОС macOS / Linux (если клонировать на других ОС)
+.DS_Store
+.AppleDouble
+.LSOverride
+*~
